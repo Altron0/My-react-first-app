@@ -1,6 +1,5 @@
 export function Details({details, setDetails}){
     const isClick = false;
-
     return (
         <>
             <h1>{details.title}</h1>
@@ -8,8 +7,7 @@ export function Details({details, setDetails}){
             <button onClick={() => setDetails(prev => {return {
                 ...prev,
                 title: prev.title + '...',
-            }})}>
-                {details.button}
+            }})}> {details.button}
             </button>
         </>
     )

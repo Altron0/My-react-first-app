@@ -1,7 +1,7 @@
 import styles from './App.module.scss';
 import { Details } from './Details';
 import { useState, useEffect } from 'react';
-
+import logo from './vite.svg';
 const MENU = [
   {
   name: 'Maks',
@@ -17,7 +17,7 @@ export function App() {
 
   const [details, setDetails] = useState({
     isLoading: true,
-    title: 'Null',
+    title: 'Logo',
     discriptions: 'React + Vita',
     button: 'Click',
   });
@@ -39,6 +39,8 @@ export function App() {
 
   return (
     <div className={styles.layout}> 
+      <img src={logo} className={styles.logo}/>
+
       {details.isLoading ? (<p>Loading....</p>) : (
       <Details details={details} setDetails={setDetails}/>
       )}
