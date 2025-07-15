@@ -1,10 +1,8 @@
-import { useContext } from "react";
-import { AuthContext } from "./AuthContext";
-
+ import { useAuth } from './Hooks/useAuth'
 
 export function Header() {
 
-    const {isLoggedIn} = useContext(AuthContext);
+    const {isLoggedIn} = useAuth();
     
     return (
         <>
